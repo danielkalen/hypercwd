@@ -76,7 +76,7 @@ exports.middleware = (store) => (next) => (action) => {
       curTabId = action.uid;
       store.dispatch({
         type: 'SESSION_SET_CWD',
-        cwd: tabs[curTabId].cwd,
+        cwd: tabs[curTabId] && tabs[curTabId].cwd || '~/',
       });
       break;
     case 'SESSION_PTY_EXIT':
