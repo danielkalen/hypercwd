@@ -1,5 +1,5 @@
 {
-  "name": "hypercwd",
+  "name": "@danielkalen/hypercwd",
   "version": "1.1.1",
   "description": "Open a Hyper tab with the same directory as the current tab",
   "main": "index.js",

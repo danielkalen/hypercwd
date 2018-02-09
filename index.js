@@ -14,6 +14,7 @@ const directoryRegex = /([a-zA-Z]:[^\:\[\]\?\"\<\>\|]+)/mi;
 
 const setCwd = (store, action, tabId, forceDispatch) => {
   const tab = tabs[tabId];
+  if (!tab) return;
   if (process.platform === 'win32') {
     const newCwd = directoryRegex.exec(action.data);
     if (newCwd) {
